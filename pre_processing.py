@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import warnings
+warnings.filterwarnings('ignore')
+
 def assign_Genre_values(df):
     p_values=df.to_list()
     #Converting p_values to set so that we get the core types of genre present on it.
@@ -44,7 +47,7 @@ def construct_proper_dataframe():
 def pre_process_all():
     df=pd.DataFrame()
     df=construct_proper_dataframe()
-    print(df.head(50))
+    #print(df.head(50))
     return df
 
 
