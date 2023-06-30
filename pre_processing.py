@@ -30,13 +30,11 @@ def construct_proper_dataframe():
     df.columns=['Movie','P_Genre','S_Genre','T_Genre']
     df['Movie']=df['Movie'].str.lower()
 
-    #Now Lets remove the duplicaes with df.drop_duplicates
+    #remove duplicaes
     df.drop_duplicates(subset ="Movie",keep='first',inplace=True)
-
-    #Lets remove double space between words
     df['Movie']=df['Movie'].str.replace("  "," ")
-    #dropping irrelevant parts of the dataframe.
-    # df=df.drop(['S.N'],axis=1)
+
+    #feature selection, we select P_Genre, S_Genre and T_Genre as movie features
     df=df.reset_index(inplace=False)
     Genres=['P_Genre','S_Genre','T_Genre']
     for Genre in Genres:
