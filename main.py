@@ -1,14 +1,14 @@
-import clustering_code
+import clustering
 import os
 
 
-def get_movie_name():
+def recommand_movie():
     input_movie=input("Enter a Movie Name: ")
     try:
         os.remove('ds_temp.csv')
     except:
         pass
-    movies=clustering_code.cluster_everything(input_movie)
+    movies=clustering.cluster_everything(input_movie)
     if type(movies)==int:
         pass
     else:
@@ -17,4 +17,4 @@ def get_movie_name():
 
     
     
-get_movie_name()
+recommand_movie()
