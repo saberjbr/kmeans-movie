@@ -1,4 +1,4 @@
-Movie recommendation system using clustering
+Movie recommendation system using kmeans clustering
 --------------------------------------------
 to run :
 pip install -r requirements.txt
